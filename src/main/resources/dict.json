@@ -1,0 +1,3733 @@
+{
+	"detailColumn": {
+		"关系人": {
+			"val": "关系人",
+			"num": 0,
+			"id": "4",
+			"lev": "1",
+			"list": {
+				"vendorType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "数据类型",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "预警指令",
+						"value": "预警指令"
+					}, {
+						"text": "线索研判",
+						"value": "线索研判"
+					}, {
+						"text": "比对推送",
+						"value": "比对推送"
+					}, {
+						"text": "手工添加",
+						"value": "手工添加"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "vendorType",
+					"required": true
+				},
+				"relateHjdz": {
+					"isHeader": true,
+					"name": "户籍地址",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"ptRefHolder": {
+					"isHeader": false,
+					"name": "在逃人员与户主关系",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createDepNo": {
+					"isHeader": false,
+					"name": "创建单位编号",
+					"type": "Input"
+				},
+				"createType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "创建方式",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "预警指令",
+						"value": "预警指令"
+					}, {
+						"text": "线索研判",
+						"value": "线索研判"
+					}, {
+						"text": "比对推送",
+						"value": "比对推送"
+					}, {
+						"text": "手工添加",
+						"value": "手工添加"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "createType",
+					"required": true
+				},
+				"relationCompareTime": {
+					"isHeader": true,
+					"name": "比对时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"createPoliceNo": {
+					"isHeader": false,
+					"name": "创建民警用户编号",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"ptPhone": {
+					"isHeader": true,
+					"name": "在逃人员手机号码",
+					"width": 200,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": false,
+					"required": true,
+					"ellipsis": true
+				},
+				"relation": {
+					"isHeader": false,
+					"name": "关系",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"caseType": {
+					"isHeader": false,
+					"name": "案件类型",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"relateName": {
+					"isHeader": true,
+					"name": "姓名",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"proved": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "状态",
+					"width": 90,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "未核实",
+						"value": "未核实"
+					}, {
+						"text": "已核实",
+						"value": "已核实"
+					}, {
+						"text": "核实未过",
+						"value": "核实未过"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "proved",
+					"required": true
+				},
+				"relatePhone": {
+					"isHeader": true,
+					"name": "手机号码",
+					"width": 200,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"infoType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "身份信息",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "真实身份",
+						"value": "真实身份"
+					}, {
+						"text": "漂白身份",
+						"value": "漂白身份"
+					}, {
+						"text": "冒用身份",
+						"value": "冒用身份"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "infoType",
+					"required": true
+				},
+				"attachment": {
+					"isHeader": false,
+					"name": "附件",
+					"type": "Upload",
+					"isForm": true,
+					"required": false
+				},
+				"relateBleachTime": {
+					"isHeader": true,
+					"name": "漂白时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"relateRefHolder": {
+					"isHeader": false,
+					"name": "关系人与户主关系",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"description": {
+					"name": "信息描述",
+					"type": "Input",
+					"required": true,
+					"isForm": true,
+					"isHeader": true,
+					"width": 120,
+					"ellipsis": true
+				},
+				"createPolice": {
+					"isHeader": true,
+					"name": "创建民警",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"visitingTime": {
+					"isHeader": false,
+					"name": "探监时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"createDep": {
+					"isHeader": true,
+					"name": "创建部门",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"id": {
+					"name": "id"
+				},
+				"relateTime": {
+					"isHeader": true,
+					"name": "关联时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"relateBleachState": {
+					"isHeader": true,
+					"name": "漂白身份状态",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"kinship": {
+					"isHeader": false,
+					"name": "亲属关系",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"relationPhoto": {
+					"isHeader": true,
+					"name": "照片",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"relationTripType": {
+					"isHeader": false,
+					"name": "同行类型",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createPolicePhone": {
+					"isHeader": true,
+					"name": "民警电话",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"relateSamePhotoName": {
+					"isHeader": true,
+					"name": "同人像姓名",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"regCity": {
+					"data": [],
+					"isHeader": true,
+					"name": "注册城市",
+					"width": 120,
+					"type": "Cascader",
+					"isForm": true,
+					"ellipsis": true
+				},
+				"relateZjhm": {
+					"isHeader": true,
+					"name": "证件号码",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": false
+				},
+				"createTime": {
+					"sorter": true,
+					"isHeader": true,
+					"name": "创建时间",
+					"width": 160,
+					"type": "Input",
+					"ellipsis": true
+				},
+				"residentialAddress": {
+					"isHeader": false,
+					"name": "居住地址",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"regZjhmType": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "注册证件类型",
+					"width": 120,
+					"type": "Select",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"visitingSites": {
+					"isHeader": false,
+					"name": "探监地点",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"relateVisitName": {
+					"isHeader": true,
+					"name": "监所探访人姓名",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"maritalStatus": {
+					"data": [],
+					"isHeader": false,
+					"name": "婚姻状况",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				}
+			},
+			"key": "relation",
+			"table": ["relatePhone", "relateName", "relateZjhm", "relateHjdz", "relateTime", "relateVisitName", "relateSamePhotoName", "relateBleachTime", "relateBleachState", "relationPhoto", "relationCompareTime", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+			"child": {
+				"其它关系人信息": {
+					"val": "其它关系人信息",
+					"num": 0,
+					"pId": "4",
+					"id": "3",
+					"lev": "2",
+					"key": "other_relation",
+					"child": {
+						"自定义": {
+							"val": "自定义",
+							"num": 0,
+							"pId": "4",
+							"id": "12",
+							"lev": "3",
+							"key": "other_relation",
+							"table": ["relatePhone", "relateName", "relateZjhm", "relateHjdz", "relateTime", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						}
+					}
+				},
+				"人像对比": {
+					"val": "人像对比",
+					"num": 0,
+					"pId": "4",
+					"id": "2",
+					"lev": "2",
+					"key": "face_compare",
+					"child": {
+						"人像对比": {
+							"val": "人像对比",
+							"num": 0,
+							"pId": "4",
+							"id": "11",
+							"lev": "3",
+							"key": "face_compare",
+							"table": ["relateSamePhotoName", "relateZjhm", "relateHjdz", "relateBleachTime", "relateBleachState", "relationCompareTime", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						}
+					}
+				},
+				"冒用身份": {
+					"val": "冒用身份",
+					"num": 0,
+					"pId": "4",
+					"id": "1",
+					"lev": "2",
+					"key": "fake",
+					"child": {
+						"冒用": {
+							"val": "冒用",
+							"num": 0,
+							"pId": "4",
+							"id": "10",
+							"lev": "3",
+							"key": "fake",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["residentialAddress", "relation", "attachment"]
+						}
+					}
+				},
+				"关系人信息": {
+					"val": "关系人信息",
+					"num": 0,
+					"pId": "4",
+					"id": "0",
+					"lev": "2",
+					"key": "relation",
+					"child": {
+						"同户": {
+							"val": "同户",
+							"num": 0,
+							"pId": "4",
+							"id": "0",
+							"lev": "3",
+							"key": "family",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["residentialAddress", "relation", "attachment"]
+						},
+						"同案\/同押": {
+							"val": "同案\/同押",
+							"num": 0,
+							"pId": "4",
+							"id": "5",
+							"lev": "3",
+							"key": "same_case",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["vendorType", "caseType", "attachment"]
+						},
+						"亲属": {
+							"val": "亲属",
+							"num": 0,
+							"pId": "4",
+							"id": "3",
+							"lev": "3",
+							"key": "relative",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["kinship", "ptRefHolder", "relateRefHolder", "attachment"]
+						},
+						"同宿": {
+							"val": "同宿",
+							"num": 0,
+							"pId": "4",
+							"id": "2",
+							"lev": "3",
+							"key": "lodging_rel",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						},
+						"同行": {
+							"val": "同行",
+							"num": 0,
+							"pId": "4",
+							"id": "1",
+							"lev": "3",
+							"key": "trip_rel",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["relationTripType", "attachment"]
+						},
+						"婚姻": {
+							"val": "婚姻",
+							"num": 0,
+							"pId": "4",
+							"id": "4",
+							"lev": "3",
+							"key": "marriage",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["maritalStatus", "attachment"]
+						},
+						"监所探访": {
+							"val": "监所探访",
+							"num": 0,
+							"pId": "4",
+							"id": "8",
+							"lev": "3",
+							"key": "prison_visit",
+							"table": ["relatePhone", "relateVisitName", "relateTime", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["visitingTime", "visitingSites", "attachment"]
+						},
+						"高频通话": {
+							"val": "高频通话",
+							"num": 0,
+							"pId": "4",
+							"id": "6",
+							"lev": "3",
+							"key": "hf_contact",
+							"table": ["relatePhone", "relateTime", "relateName", "relateZjhm", "relateHjdz", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						}
+					}
+				}
+			}
+		},
+		"注册类": {
+			"val": "注册类",
+			"num": 0,
+			"id": "1",
+			"filters": [{
+				"text": "全部",
+				"value": ""
+			}, {
+				"text": "滴滴",
+				"value": "滴滴"
+			}, {
+				"text": "京东",
+				"value": "京东"
+			}, {
+				"text": "神州",
+				"value": "神州"
+			}, {
+				"text": "财付通",
+				"value": "财付通"
+			}, {
+				"text": "支付宝",
+				"value": "支付宝"
+			}, {
+				"text": "度小满",
+				"value": "度小满"
+			}, {
+				"text": "京东金融",
+				"value": "京东金融"
+			}],
+			"lev": "1",
+			"list": {
+				"regImsi": {
+					"isHeader": true,
+					"name": "IMSI",
+					"verify": "IMSI",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"loginAddress": {
+					"isHeader": false,
+					"name": "登陆地址",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"belongArea": {
+					"data": [],
+					"isHeader": false,
+					"name": "归属地",
+					"verify": "",
+					"type": "Cascader",
+					"isForm": true,
+					"required": false
+				},
+				"education": {
+					"isHeader": false,
+					"name": "学历",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"createDepNo": {
+					"isHeader": false,
+					"name": "创建单位编号",
+					"type": "Input"
+				},
+				"visage": {
+					"isHeader": false,
+					"name": "政治面貌",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"companyFunds": {
+					"isHeader": false,
+					"name": "注册资金",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createPoliceNo": {
+					"isHeader": false,
+					"name": "创建民警用户编号",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"ptPhone": {
+					"isHeader": true,
+					"name": "在逃人员手机号码",
+					"width": 200,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": false,
+					"required": true,
+					"ellipsis": true
+				},
+				"relaOther": {
+					"isHeader": false,
+					"name": "关联其他账号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"infoType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "身份信息",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "真实身份",
+						"value": "真实身份"
+					}, {
+						"text": "漂白身份",
+						"value": "漂白身份"
+					}, {
+						"text": "冒用身份",
+						"value": "冒用身份"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "infoType",
+					"required": true
+				},
+				"weiXin": {
+					"isHeader": false,
+					"name": "微信号码",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"loginIp": {
+					"isHeader": false,
+					"name": "登陆IP",
+					"verify": "ip",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"members": {
+					"isHeader": false,
+					"name": "家庭人口",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"createPolice": {
+					"isHeader": true,
+					"name": "创建民警",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"raise": {
+					"isHeader": false,
+					"name": "是否已育",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"contactAddress": {
+					"isHeader": false,
+					"name": "联系地址",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"id": {
+					"name": "id"
+				},
+				"regNickName": {
+					"isHeader": true,
+					"name": "昵称",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"longitude": {
+					"isHeader": false,
+					"name": "经度",
+					"verify": "longitude",
+					"placeholder": "请输入经度，范围是0-180，例：110.90",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"regAccount": {
+					"isHeader": true,
+					"name": "账号",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"ethnic": {
+					"isHeader": false,
+					"name": "民族",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"idfa": {
+					"isHeader": false,
+					"name": "idfa",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"ip": {
+					"isHeader": false,
+					"name": "联网ip",
+					"verify": "ip",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"regTime": {
+					"isHeader": true,
+					"name": "注册时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"regPerson": {
+					"isHeader": true,
+					"name": "注册人",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": false
+				},
+				"regCity": {
+					"data": [],
+					"isHeader": true,
+					"name": "注册城市",
+					"width": 120,
+					"type": "Cascader",
+					"isForm": true,
+					"ellipsis": true
+				},
+				"regBindingBankNo": {
+					"isHeader": true,
+					"name": "注册绑定银行卡号",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"ipPort": {
+					"isHeader": false,
+					"name": "最后登录IP端口",
+					"verify": "port",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"regEmail": {
+					"isHeader": false,
+					"name": "邮箱地址",
+					"verify": "email",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"name": {
+					"isHeader": false,
+					"name": "旅业名称",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"nativePlace": {
+					"isHeader": false,
+					"name": "籍贯",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"baseStation": {
+					"data": [],
+					"isHeader": false,
+					"name": "基站",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"regZjhmType": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "证件类型",
+					"width": 120,
+					"type": "Select",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"status": {
+					"isHeader": false,
+					"name": "账户状态",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"foreignLanguages": {
+					"isHeader": false,
+					"name": "外语方言",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"vendorType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "数据类型",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "滴滴",
+						"value": "滴滴"
+					}, {
+						"text": "京东",
+						"value": "京东"
+					}, {
+						"text": "神州",
+						"value": "神州"
+					}, {
+						"text": "财付通",
+						"value": "财付通"
+					}, {
+						"text": "支付宝",
+						"value": "支付宝"
+					}, {
+						"text": "度小满",
+						"value": "度小满"
+					}, {
+						"text": "京东金融",
+						"value": "京东金融"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "vendorType",
+					"required": true
+				},
+				"emgyContact": {
+					"isHeader": false,
+					"name": "紧急联系人",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"companyScale": {
+					"isHeader": false,
+					"name": "企业规模",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"religious": {
+					"isHeader": false,
+					"name": "宗教信仰",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"latitude": {
+					"isHeader": false,
+					"name": "纬度",
+					"verify": "latitude",
+					"placeholder": "请输入纬度，范围是0-90，例：39.90",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"openingTime": {
+					"isHeader": false,
+					"name": "开户时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"description": {
+					"isHeader": false,
+					"name": "备注信息",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"createType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "创建方式",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "预警指令",
+						"value": "预警指令"
+					}, {
+						"text": "线索研判",
+						"value": "线索研判"
+					}, {
+						"text": "比对推送",
+						"value": "比对推送"
+					}, {
+						"text": "手工添加",
+						"value": "手工添加"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "createType",
+					"required": true
+				},
+				"regPhone": {
+					"isHeader": true,
+					"name": "注册手机号码",
+					"width": 200,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"openingBank": {
+					"data": [],
+					"isHeader": false,
+					"name": "开户银行",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"proved": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "状态",
+					"width": 90,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "未核实",
+						"value": "未核实"
+					}, {
+						"text": "已核实",
+						"value": "已核实"
+					}, {
+						"text": "核实未过",
+						"value": "核实未过"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "proved",
+					"required": true
+				},
+				"loginTime": {
+					"isHeader": false,
+					"name": "最后操作时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"attachment": {
+					"isHeader": false,
+					"name": "附件",
+					"type": "Upload",
+					"isForm": true,
+					"required": false
+				},
+				"marriage": {
+					"isHeader": false,
+					"name": "婚姻",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"bankNo": {
+					"isHeader": false,
+					"name": "银行卡号",
+					"type": "Input",
+					"isForm": true,
+					"required": true
+				},
+				"createDep": {
+					"isHeader": true,
+					"name": "创建部门",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"regZjhm": {
+					"isHeader": true,
+					"name": "注册证件号码",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"regAddress": {
+					"isHeader": true,
+					"name": "注册地址",
+					"width": 120,
+					"verify": "address",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"regType": {
+					"isHeader": false,
+					"name": "注册方式",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"emgyPhone": {
+					"isHeader": false,
+					"name": "紧急联系人电话号码",
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"dutyParagraph": {
+					"isHeader": false,
+					"name": "工商税号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"mandarin": {
+					"isHeader": false,
+					"name": "普通话",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"registry": {
+					"isHeader": false,
+					"name": "注册内容",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"address": {
+					"isHeader": false,
+					"name": "身份证地址",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"sy": {
+					"isHeader": false,
+					"name": "生育数",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"sex": {
+					"isHeader": false,
+					"name": "性别",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"lawPerson": {
+					"isHeader": false,
+					"name": "法人代表",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"loginStatus": {
+					"isHeader": false,
+					"name": "登录状态",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createPolicePhone": {
+					"isHeader": false,
+					"name": "民警电话",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"relaQqNo": {
+					"isHeader": false,
+					"name": "关联QQ账号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"relaTaoBaoNo": {
+					"isHeader": false,
+					"name": "关联淘宝账号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createTime": {
+					"sorter": true,
+					"isHeader": false,
+					"name": "创建时间",
+					"width": 160,
+					"type": "Input",
+					"ellipsis": true
+				},
+				"imei": {
+					"isHeader": false,
+					"name": "imei",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"location": {
+					"isHeader": false,
+					"name": "位置",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"relaPhoneNo": {
+					"isHeader": false,
+					"name": "关联手机号码",
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"regCorpName": {
+					"isHeader": true,
+					"name": "企业名称",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"relaWechatNo": {
+					"isHeader": false,
+					"name": "关联微信账号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"account": {
+					"isHeader": false,
+					"name": "户口类型",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				}
+			},
+			"key": "registry",
+			"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regImsi", "regCity", "regAccount", "regNickName", "regAddress", "regBindingBankNo", "regCorpName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+			"child": {
+				"其它注册": {
+					"val": "其它注册",
+					"num": 0,
+					"pId": "1",
+					"id": "2",
+					"lev": "2",
+					"key": "other_registry",
+					"child": {
+						"其它注册": {
+							"val": "其它注册",
+							"num": 0,
+							"pId": "1",
+							"id": "10",
+							"lev": "3",
+							"key": "other_registry",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "registry", "name", "attachment"]
+						}
+					}
+				},
+				"通讯工具": {
+					"val": "通讯工具",
+					"num": 0,
+					"pId": "1",
+					"id": "0",
+					"lev": "2",
+					"key": "communication",
+					"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regImsi", "regCity", "regAccount", "regNickName", "regAddress", "regBindingBankNo", "regCorpName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+					"child": {
+						"QQ": {
+							"val": "QQ",
+							"num": 0,
+							"pId": "1",
+							"id": "2",
+							"lev": "3",
+							"key": "qq",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAccount", "regNickName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "emgyContact", "emgyPhone", "loginStatus", "relaPhoneNo", "relaWechatNo", "relaOther", "loginAddress", "loginIp", "loginTime", "ipPort", "location", "longitude", "latitude", "status", "attachment"]
+						},
+						"手机": {
+							"val": "手机",
+							"num": 0,
+							"pId": "1",
+							"id": "0",
+							"lev": "3",
+							"key": "phone",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regImsi", "regCity", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "emgyContact", "emgyPhone", "regAddress", "belongArea", "ip", "baseStation", "longitude", "latitude", "status", "attachment"]
+						},
+						"其他通讯工具": {
+							"val": "其他通讯工具",
+							"num": 0,
+							"pId": "1",
+							"id": "10",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "滴滴",
+								"value": "滴滴"
+							}, {
+								"text": "京东",
+								"value": "京东"
+							}, {
+								"text": "神州",
+								"value": "神州"
+							}, {
+								"text": "美团",
+								"value": "美团"
+							}, {
+								"text": "快手",
+								"value": "快手"
+							}],
+							"lev": "3",
+							"key": "other_communication",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "registry", "name", "status", "attachment"]
+						},
+						"微信": {
+							"val": "微信",
+							"num": 0,
+							"pId": "1",
+							"id": "1",
+							"lev": "3",
+							"key": "wechat",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAccount", "regNickName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "loginStatus", "relaPhoneNo", "relaQqNo", "relaOther", "loginAddress", "loginIp", "loginTime", "ipPort", "location", "longitude", "latitude", "status", "attachment"]
+						}
+					}
+				},
+				"注册信息": {
+					"val": "注册信息",
+					"num": 0,
+					"pId": "1",
+					"id": "1",
+					"lev": "2",
+					"key": "registry",
+					"child": {
+						"12306": {
+							"val": "12306",
+							"num": 0,
+							"pId": "1",
+							"id": "5",
+							"lev": "3",
+							"key": "railway",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAccount", "regNickName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "emgyContact", "emgyPhone", "relaPhoneNo", "loginAddress", "loginIp", "loginTime", "ipPort", "location", "longitude", "latitude", "status", "attachment"]
+						},
+						"网络注册账号": {
+							"val": "网络注册账号",
+							"num": 0,
+							"pId": "1",
+							"id": "6",
+							"lev": "3",
+							"key": "internet_reg",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAccount", "regNickName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "emgyContact", "emgyPhone", "relaPhoneNo", "relaOther", "loginAddress", "loginIp", "loginTime", "ipPort", "location", "longitude", "latitude", "status", "attachment", "sex", "address", "nativePlace", "ethnic", "religious", "education", "mandarin", "foreignLanguages", "marriage", "raise", "members", "account", "visage", "contactAddress", "sy", "weiXin"]
+						},
+						"ZFB": {
+							"val": "ZFB",
+							"num": 0,
+							"pId": "1",
+							"id": "4",
+							"lev": "3",
+							"key": "alipay",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAccount", "regNickName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "loginStatus", "regType", "regEmail", "relaPhoneNo", "relaTaoBaoNo", "relaOther", "loginAddress", "loginIp", "loginTime", "ipPort", "location", "longitude", "latitude", "status", "attachment"]
+						},
+						"工商税务": {
+							"val": "工商税务",
+							"num": 0,
+							"pId": "1",
+							"id": "9",
+							"lev": "3",
+							"key": "gssw",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAddress", "regCorpName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "lawPerson", "companyScale", "companyFunds", "dutyParagraph", "status", "attachment"]
+						},
+						"银行卡号": {
+							"val": "银行卡号",
+							"num": 0,
+							"pId": "1",
+							"id": "7",
+							"lev": "3",
+							"key": "bank_reg",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "emgyContact", "emgyPhone", "openingTime", "openingBank", "status", "attachment"]
+						},
+						"第三方支付": {
+							"val": "第三方支付",
+							"num": 0,
+							"pId": "1",
+							"id": "8",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "财付通",
+								"value": "财付通"
+							}, {
+								"text": "支付宝",
+								"value": "支付宝"
+							}, {
+								"text": "京东金融",
+								"value": "京东金融"
+							}, {
+								"text": "度小满",
+								"value": "度小满"
+							}],
+							"lev": "3",
+							"key": "thirdpartpay",
+							"table": ["regPhone", "regTime", "regPerson", "regZjhmType", "regZjhm", "regAddress", "regBindingBankNo", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["imei", "idfa", "status", "attachment"]
+						}
+					}
+				}
+			}
+		},
+		"轨迹类": {
+			"val": "轨迹类",
+			"num": 0,
+			"id": "2",
+			"filters": [{
+				"text": "全部",
+				"value": ""
+			}, {
+				"text": "民航",
+				"value": "民航"
+			}, {
+				"text": "火车",
+				"value": "火车"
+			}, {
+				"text": "客运",
+				"value": "客运"
+			}, {
+				"text": "水运",
+				"value": "水运"
+			}, {
+				"text": "滴滴",
+				"value": "滴滴"
+			}, {
+				"text": "美团",
+				"value": "美团"
+			}, {
+				"text": "神州",
+				"value": "神州"
+			}, {
+				"text": "曹操",
+				"value": "曹操"
+			}, {
+				"text": "百度",
+				"value": "百度"
+			}, {
+				"text": "饿了么",
+				"value": "饿了么"
+			}, {
+				"text": "淘宝",
+				"value": "淘宝"
+			}, {
+				"text": "京东",
+				"value": "京东"
+			}, {
+				"text": "快手",
+				"value": "快手"
+			}, {
+				"text": "抖音",
+				"value": "抖音"
+			}, {
+				"text": "三通一达",
+				"value": "三通一达"
+			}, {
+				"text": "顺丰",
+				"value": "顺丰"
+			}, {
+				"text": "闪送",
+				"value": "闪送"
+			}],
+			"lev": "1",
+			"list": {
+				"orderType": {
+					"data": [],
+					"name": "订单状态",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"fellowResidentsOfIdNumber": {
+					"isHeader": false,
+					"name": "同住人证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"orderId": {
+					"isHeader": false,
+					"name": "订单ID",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"IdCardOfThePurchaser": {
+					"isHeader": false,
+					"name": "购票人证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"occurTime": {
+					"isHeader": false,
+					"name": "出现时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"cneeFixedTel": {
+					"isHeader": false,
+					"name": "订单中用户固定电话",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"vehicleCate": {
+					"isHeader": false,
+					"name": "车型",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"zjhm": {
+					"isHeader": false,
+					"name": "证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createPoliceNo": {
+					"isHeader": false,
+					"name": "创建民警用户编号",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"carryBillId": {
+					"isHeader": false,
+					"name": "承运订单号",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"osp": {
+					"isHeader": false,
+					"name": "操作系统信息",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"loginPort": {
+					"isHeader": false,
+					"name": "IP端口",
+					"verify": "port",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"itemName": {
+					"isHeader": false,
+					"name": "物品名称",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceStartLocation": {
+					"isHeader": true,
+					"name": "开始地点",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"traceContent": {
+					"isHeader": false,
+					"name": "轨迹内容",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"osv": {
+					"isHeader": false,
+					"name": "操作系统版本",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"loginName": {
+					"isHeader": false,
+					"name": "登录人姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"loginIp": {
+					"isHeader": false,
+					"name": "登陆IP",
+					"verify": "ip",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createPolice": {
+					"isHeader": true,
+					"name": "创建民警",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"recipientName": {
+					"isHeader": false,
+					"name": "收件人姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"mcOrdFlag": {
+					"isHeader": false,
+					"name": "手机客户端下单标识",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"id": {
+					"name": "id"
+				},
+				"theRecipient": {
+					"isHeader": false,
+					"name": "收件人",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"businessAddress": {
+					"isHeader": false,
+					"name": "商户地址",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"driverLicensePlate": {
+					"isHeader": false,
+					"name": "车牌号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"vehicleType": {
+					"isHeader": false,
+					"name": "型号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"passengers": {
+					"isHeader": false,
+					"name": "乘客",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"tracePhone": {
+					"isHeader": true,
+					"name": "手机号码",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"traceOrderContent": {
+					"isHeader": true,
+					"name": "订单内容",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"idfa": {
+					"isHeader": false,
+					"name": "IOS广告标识符",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceSendCourierName": {
+					"isHeader": true,
+					"name": "送件快递员姓名",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"traceOtherContent": {
+					"isHeader": true,
+					"name": "轨迹内容",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"theRiderPhone": {
+					"isHeader": false,
+					"name": "骑手电话",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false,
+					"ellipsis": true
+				},
+				"merchantPhone": {
+					"isHeader": false,
+					"name": "商户电话",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"idCardOfRecipient": {
+					"isHeader": false,
+					"name": "收件人证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"browserUniqId": {
+					"isHeader": false,
+					"name": "浏览渠道",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceViolateTime": {
+					"isHeader": true,
+					"name": "违章时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"traceHotelAddress": {
+					"data": [],
+					"isHeader": true,
+					"name": "旅业地址",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"similarityDegree": {
+					"isHeader": false,
+					"name": "相似度",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"paymentAccount": {
+					"isHeader": false,
+					"name": "收款账户",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"typeTheSingle": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "下单人证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"stationCode": {
+					"isHeader": false,
+					"name": "基站代码",
+					"type": "Input",
+					"isForm": true,
+					"required": true
+				},
+				"traceChannel": {
+					"isHeader": true,
+					"name": "下单渠道",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"cardTypeOfPassenger": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "乘车人证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"shotTime": {
+					"isHeader": false,
+					"name": "抓拍时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"clientName": {
+					"isHeader": false,
+					"name": "客户姓名",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"latitude": {
+					"isHeader": false,
+					"name": "纬度",
+					"verify": "latitude",
+					"placeholder": "请输入纬度，范围是0-90，例：39.90",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"liveWithPeople": {
+					"isHeader": false,
+					"name": "同住人",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"revAddr": {
+					"isHeader": false,
+					"name": "订单收货地址",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"plate": {
+					"isHeader": false,
+					"name": "车牌",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"imsi": {
+					"isHeader": false,
+					"name": "SIM卡唯一标识",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"idCardOfCarHailer": {
+					"isHeader": false,
+					"name": "叫车人证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"phoneOfPassenger": {
+					"isHeader": false,
+					"name": "乘车人手机号码",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false,
+					"ellipsis": true
+				},
+				"mac": {
+					"isHeader": false,
+					"name": "手机mac地址",
+					"verify": "mac",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"proved": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "状态",
+					"width": 90,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "未核实",
+						"value": "未核实"
+					}, {
+						"text": "已核实",
+						"value": "已核实"
+					}, {
+						"text": "核实未过",
+						"value": "核实未过"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "proved",
+					"required": true
+				},
+				"loginTime": {
+					"isHeader": false,
+					"name": "登陆时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"userActualPayAmount": {
+					"isHeader": false,
+					"name": "实际支付金额",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"wifiName": {
+					"isHeader": false,
+					"name": "wifi名称",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceOccurLocation": {
+					"isHeader": true,
+					"name": "出现地址",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"traceStationName": {
+					"isHeader": true,
+					"name": "基站名称",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"sendersAddress": {
+					"isHeader": false,
+					"name": "寄件地址",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceClubAddress": {
+					"data": [],
+					"isHeader": false,
+					"name": "网吧地址",
+					"width": 100,
+					"type": "Input",
+					"isForm": true,
+					"ellipsis": true
+				},
+				"bankCode": {
+					"isHeader": false,
+					"name": "银行代码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"placeOrdIp": {
+					"isHeader": false,
+					"name": "下单IP",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"sendersName": {
+					"isHeader": false,
+					"name": "寄件人姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"driverIdCard": {
+					"isHeader": false,
+					"name": "司机证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"phoneOfCarHailer": {
+					"isHeader": true,
+					"name": "叫车人手机号码",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false,
+					"ellipsis": true
+				},
+				"driverVehicleType": {
+					"isHeader": false,
+					"name": "车辆型号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"vct": {
+					"isHeader": false,
+					"name": "本次会话创建时间",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"transactionNumber": {
+					"isHeader": false,
+					"name": "交易单号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceBankType": {
+					"defineVal": "",
+					"data": ["ATM", "柜台"],
+					"isHeader": true,
+					"name": "银行出现类型",
+					"type": "Select",
+					"isForm": false,
+					"required": true
+				},
+				"idCardOfPassenger": {
+					"isHeader": false,
+					"name": "乘车人证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"driverVehicleColor": {
+					"isHeader": false,
+					"name": "车辆颜色",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createPolicePhone": {
+					"isHeader": true,
+					"name": "民警电话",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"ticketTime": {
+					"isHeader": false,
+					"name": "购票时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"traceCity": {
+					"isHeader": true,
+					"name": "城市",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"createTime": {
+					"sorter": true,
+					"isHeader": true,
+					"name": "创建时间",
+					"width": 160,
+					"type": "Input",
+					"ellipsis": true
+				},
+				"loginPhone": {
+					"isHeader": false,
+					"name": "登录人手机号码",
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"userLogAcct": {
+					"isHeader": false,
+					"name": "用户登录账户",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceVisaCountry": {
+					"isHeader": true,
+					"name": "签证国家及地区",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"payOnlineBankName": {
+					"isHeader": false,
+					"name": "网上支付银行名称",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"underTheSingle": {
+					"isHeader": false,
+					"name": "下单人",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"userRegTime": {
+					"isHeader": false,
+					"name": "用户注册时间",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"saleOrdTime": {
+					"isHeader": false,
+					"name": "销售订购时间",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"corp": {
+					"isHeader": false,
+					"name": "用户表中用户所在单位",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"createDepNo": {
+					"isHeader": false,
+					"name": "创建单位编号",
+					"type": "Input"
+				},
+				"payTime": {
+					"isHeader": false,
+					"name": "付款时间",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"modeOfTransport": {
+					"isHeader": false,
+					"name": "交通方式",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceViolateType": {
+					"defineVal": "",
+					"data": [],
+					"isHeader": true,
+					"name": "违章类型",
+					"type": "Input",
+					"isForm": false,
+					"required": true,
+					"ellipsis": true
+				},
+				"moreCity": {
+					"isHeader": false,
+					"name": "出现最多的",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"fellowResidentsOfIdType": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "同住人证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"ordCancelTime": {
+					"isHeader": false,
+					"name": "订单取消时间",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"ptPhone": {
+					"isHeader": true,
+					"name": "在逃人员手机号码",
+					"width": 200,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": false,
+					"required": true,
+					"ellipsis": true
+				},
+				"traceOccurGeo": {
+					"isHeader": false,
+					"name": "出现经纬度地点",
+					"isForm": false
+				},
+				"orderContent": {
+					"isHeader": false,
+					"name": "订单内容",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"merchantName": {
+					"isHeader": false,
+					"name": "商户名称",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceStartTime": {
+					"isHeader": true,
+					"name": "开始时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": false
+				},
+				"selfCarryName": {
+					"isHeader": false,
+					"name": "订单自提点名称",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"infoType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "身份信息",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "真实身份",
+						"value": "真实身份"
+					}, {
+						"text": "漂白身份",
+						"value": "漂白身份"
+					}, {
+						"text": "冒用身份",
+						"value": "冒用身份"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "infoType",
+					"required": true
+				},
+				"orderTime": {
+					"isHeader": false,
+					"name": "下单时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"pin": {
+					"isHeader": false,
+					"name": "pin",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"cneeMailAddr": {
+					"isHeader": false,
+					"name": "订单中的用户邮箱",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceEndLocation": {
+					"isHeader": true,
+					"name": "结束地点",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"orderPhoneNumber": {
+					"data": [],
+					"isHeader": false,
+					"name": "下单手机号码",
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"net": {
+					"isHeader": false,
+					"name": "上报时网络类型",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"typeOfPayment": {
+					"isHeader": false,
+					"name": "支付方式",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"jdUuid": {
+					"isHeader": false,
+					"name": "京东UUID",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"longitude": {
+					"isHeader": false,
+					"name": "经度",
+					"verify": "longitude",
+					"placeholder": "请输入经度，范围是0-180，例：110.90",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"mct": {
+					"isHeader": false,
+					"name": "品牌信息",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"documentTypeOfSenders": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "寄件人证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"phoneTheSingle": {
+					"isHeader": false,
+					"name": "下单人手机号码",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false,
+					"ellipsis": true
+				},
+				"recipientPhone": {
+					"isHeader": false,
+					"name": "收件人手机号码",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false,
+					"ellipsis": true
+				},
+				"driverVehicleBrand": {
+					"isHeader": false,
+					"name": "车辆品牌",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"theRiderCardType": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "骑手证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"wqUnionid": {
+					"isHeader": false,
+					"name": "腾讯端唯一索引",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"emergencyContact": {
+					"isHeader": false,
+					"name": "紧急联系人",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceEndTime": {
+					"isHeader": true,
+					"name": "结束时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": false
+				},
+				"idCardOfSenders": {
+					"isHeader": false,
+					"name": "寄件人证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"idCardTheSingle": {
+					"isHeader": false,
+					"name": "下单人证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"saleQtty": {
+					"isHeader": false,
+					"name": "销售数量",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"clientPhone": {
+					"isHeader": false,
+					"name": "客户手机号",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"description": {
+					"name": "信息描述",
+					"type": "Input",
+					"required": true,
+					"isForm": true,
+					"isHeader": true,
+					"width": 120,
+					"ellipsis": true
+				},
+				"purchaseTickets": {
+					"isHeader": false,
+					"name": "购票人",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"corpPhone": {
+					"isHeader": false,
+					"name": "单位电话",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"sendersPhone": {
+					"isHeader": false,
+					"name": "寄件人手机号码",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false,
+					"ellipsis": true
+				},
+				"occurDepNo": {
+					"isHeader": false,
+					"name": "出现单位编号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"name": {
+					"isHeader": false,
+					"name": "姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"orderCorp": {
+					"isHeader": false,
+					"name": "订单单位",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"driverName": {
+					"isHeader": false,
+					"name": "司机姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"userPayablrAmount": {
+					"isHeader": false,
+					"name": "用户应付金额",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceStationCode": {
+					"isHeader": true,
+					"name": "基站代码",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"lastUpdateTime": {
+					"isHeader": false,
+					"name": "最后更新时间",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceSiteNo": {
+					"isHeader": true,
+					"name": "座号",
+					"width": 50,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"vendorType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "数据类型",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "vendorType",
+					"required": true
+				},
+				"documentTypeOfRecipient": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "收件人证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"occurDep": {
+					"isHeader": false,
+					"name": "出现单位",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"imi": {
+					"isHeader": false,
+					"name": "手机IMEI",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"documentType": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"traceAcceptCourierName": {
+					"isHeader": true,
+					"name": "收件快递员姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"theRiderIdCard": {
+					"isHeader": false,
+					"name": "骑手证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "创建方式",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "预警指令",
+						"value": "预警指令"
+					}, {
+						"text": "线索研判",
+						"value": "线索研判"
+					}, {
+						"text": "比对推送",
+						"value": "比对推送"
+					}, {
+						"text": "手工添加",
+						"value": "手工添加"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "createType",
+					"required": true
+				},
+				"addressOfRecipient": {
+					"isHeader": false,
+					"name": "收件地址",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"bankName": {
+					"isHeader": false,
+					"name": "银行名称",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceRoomNo": {
+					"isHeader": true,
+					"name": "房号",
+					"width": 50,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"paymentAmount": {
+					"isHeader": false,
+					"name": "支付金额",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"orderChannel": {
+					"isHeader": false,
+					"name": "订单渠道",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"chnl": {
+					"isHeader": false,
+					"name": "浏览器唯一号",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"ims": {
+					"isHeader": false,
+					"name": "运营商信息",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceExpArvTime": {
+					"isHeader": true,
+					"name": "快递送达时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"nameOfPassenger": {
+					"isHeader": false,
+					"name": "乘车人姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceViolateLocation": {
+					"isHeader": true,
+					"name": "违章地点",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"documentTypeOfCarHailer": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "叫车人证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"attachment": {
+					"isHeader": false,
+					"name": "附件",
+					"type": "Upload",
+					"isForm": true,
+					"required": false
+				},
+				"clientCard": {
+					"isHeader": false,
+					"name": "客户身份证号码",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"delvStationName": {
+					"isHeader": false,
+					"name": "配送点名称",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"createDep": {
+					"isHeader": true,
+					"name": "创建部门",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"stationName": {
+					"isHeader": false,
+					"name": "基站名称",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"traceBankName": {
+					"isHeader": true,
+					"name": "银行名称",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"machineType": {
+					"isHeader": false,
+					"name": "设备类型",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"vehicleColor": {
+					"data": [],
+					"isHeader": false,
+					"name": "颜色",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"driverCertificateType": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"name": "司机证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"recipientTime": {
+					"isHeader": false,
+					"name": "收件时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"theRiderName": {
+					"isHeader": false,
+					"name": "骑手姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"payModeCd": {
+					"isHeader": false,
+					"name": "支付方式",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"userSiteSchool": {
+					"isHeader": false,
+					"name": "用户所在学校",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"cityList": {
+					"isHeader": false,
+					"name": "出现城市",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"nameOfCarHailer": {
+					"isHeader": false,
+					"name": "叫车人姓名",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"userRegAddr": {
+					"isHeader": false,
+					"name": "最近一次订单地址",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				},
+				"traceOccurTime": {
+					"isHeader": true,
+					"name": "出现时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"typeOfIdCard": {
+					"defineVal": "身份证",
+					"data": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"],
+					"isHeader": false,
+					"name": "购票人证件类型",
+					"type": "Select",
+					"isForm": true,
+					"required": false
+				},
+				"identificationNumber": {
+					"isHeader": false,
+					"name": "证件号码",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"detailAddress": {
+					"isHeader": false,
+					"name": "详细地址",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"driverPhone": {
+					"isHeader": false,
+					"name": "司机电话",
+					"width": 120,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false,
+					"ellipsis": true
+				},
+				"wifiMac": {
+					"isHeader": false,
+					"name": "wifi-mac地址",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"xfsj": {
+					"isHeader": false,
+					"name": "下发时间",
+					"type": "Input",
+					"isForm": false,
+					"required": false
+				}
+			},
+			"key": "trace",
+			"table": ["traceCity", "tracePhone", "traceStartTime", "traceStartLocation", "traceEndTime", "traceEndLocation", "traceClubAddress", "traceSiteNo", "traceChannel", "traceHotelAddress", "traceRoomNo", "traceExpArvTime", "traceOrderContent", "traceAcceptCourierName", "traceSendCourierName", "traceOccurTime", "traceOccurLocation", "traceOccurGeo", "traceVisaCountry", "traceViolateTime", "traceViolateLocation", "traceViolateType", "traceStationCode", "traceStationName", "traceBankType", "traceBankName", "traceOtherContent", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+			"child": {
+				"内网轨迹": {
+					"val": "内网轨迹",
+					"num": 0,
+					"pId": "2",
+					"id": "3",
+					"lev": "2",
+					"key": "inner_trace",
+					"child": {
+						"话单基站": {
+							"val": "话单基站",
+							"num": 0,
+							"pId": "2",
+							"id": "11",
+							"lev": "3",
+							"key": "phone_station",
+							"table": ["traceCity", "traceOccurTime", "traceOccurLocation", "traceStationCode", "traceStationName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						},
+						"人脸": {
+							"val": "人脸",
+							"num": 0,
+							"pId": "2",
+							"id": "9",
+							"lev": "3",
+							"key": "barrier_face",
+							"table": ["traceCity", "traceOccurTime", "traceOccurLocation", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["shotTime", "longitude", "latitude", "similarityDegree", "attachment"]
+						},
+						"银行业务": {
+							"val": "银行业务",
+							"num": 0,
+							"pId": "2",
+							"id": "12",
+							"lev": "3",
+							"key": "bank_trace",
+							"table": ["traceCity", "traceBankType", "traceBankName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						},
+						"车辆违章": {
+							"val": "车辆违章",
+							"num": 0,
+							"pId": "2",
+							"id": "10",
+							"lev": "3",
+							"key": "vehicle_violation",
+							"table": ["traceCity", "traceViolateTime", "traceViolateLocation", "traceViolateType", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						}
+					}
+				},
+				"出行轨迹": {
+					"val": "出行轨迹",
+					"num": 0,
+					"pId": "2",
+					"id": "0",
+					"lev": "2",
+					"key": "trip_trace",
+					"child": {
+						"出入境": {
+							"val": "出入境",
+							"num": 0,
+							"pId": "2",
+							"id": "3",
+							"lev": "3",
+							"key": "exen_country",
+							"table": ["traceCity", "traceOccurTime", "traceOccurLocation", "traceOccurGeo", "traceVisaCountry", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						},
+						"公共出行": {
+							"val": "公共出行",
+							"num": 0,
+							"pId": "2",
+							"id": "0",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "民航",
+								"value": "民航"
+							}, {
+								"text": "火车",
+								"value": "火车"
+							}, {
+								"text": "客运",
+								"value": "客运"
+							}, {
+								"text": "水运",
+								"value": "水运"
+							}],
+							"lev": "3",
+							"key": "public_trip",
+							"table": ["traceCity", "traceStartTime", "traceStartLocation", "traceEndTime", "traceEndLocation", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["orderId", "orderCorp", "corpPhone", "modeOfTransport", "orderPhoneNumber", "ticketTime", "purchaseTickets", "typeOfIdCard", "IdCardOfThePurchaser", "passengers", "documentType", "identificationNumber", "attachment"]
+						},
+						"卡口": {
+							"val": "卡口",
+							"num": 0,
+							"pId": "2",
+							"id": "2",
+							"lev": "3",
+							"key": "barrier",
+							"table": ["traceCity", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["plate", "vehicleCate", "vehicleType", "vehicleColor", "occurTime", "attachment"]
+						},
+						"住宿": {
+							"val": "住宿",
+							"num": 0,
+							"pId": "2",
+							"id": "1",
+							"lev": "3",
+							"key": "lodging",
+							"table": ["traceCity", "traceStartTime", "tracePhone", "traceEndTime", "traceChannel", "traceHotelAddress", "traceRoomNo", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["documentType", "identificationNumber", "orderTime", "liveWithPeople", "fellowResidentsOfIdType", "fellowResidentsOfIdNumber", "attachment"]
+						}
+					}
+				},
+				"互联网轨迹": {
+					"val": "互联网轨迹",
+					"num": 0,
+					"pId": "2",
+					"id": "1",
+					"lev": "2",
+					"key": "internet_trace",
+					"child": {
+						"互联网出行": {
+							"val": "互联网出行",
+							"num": 0,
+							"pId": "2",
+							"id": "4",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "滴滴",
+								"value": "滴滴"
+							}, {
+								"text": "美团",
+								"value": "美团"
+							}, {
+								"text": "神州",
+								"value": "神州"
+							}, {
+								"text": "曹操",
+								"value": "曹操"
+							}],
+							"lev": "3",
+							"key": "internet_trip",
+							"table": ["traceCity", "traceStartTime", "traceStartLocation", "traceEndTime", "traceEndLocation", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["orderId", "name", "nameOfCarHailer", "documentTypeOfCarHailer", "idCardOfCarHailer", "phoneOfCarHailer", "nameOfPassenger", "cardTypeOfPassenger", "idCardOfPassenger", "phoneOfPassenger", "driverName", "driverPhone", "orderTime", "orderType", "typeOfPayment", "transactionNumber", "driverCertificateType", "driverIdCard", "driverLicensePlate", "driverVehicleBrand", "driverVehicleType", "driverVehicleColor", "paymentAmount", "occurDepNo", "occurDep", "attachment"]
+						},
+						"互联网订单": {
+							"val": "互联网订单",
+							"num": 0,
+							"pId": "2",
+							"id": "5",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "滴滴",
+								"value": "滴滴"
+							}, {
+								"text": "美团",
+								"value": "美团"
+							}, {
+								"text": "百度",
+								"value": "百度"
+							}, {
+								"text": "饿了么",
+								"value": "饿了么"
+							}, {
+								"text": "淘宝",
+								"value": "淘宝"
+							}, {
+								"text": "京东",
+								"value": "京东"
+							}, {
+								"text": "58DJ",
+								"value": "58DJ"
+							}],
+							"lev": "3",
+							"key": "internet_order",
+							"table": ["traceCity", "traceStartTime", "traceStartLocation", "traceEndTime", "traceEndLocation", "tracePhone", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["orderId", "theRecipient", "documentType", "identificationNumber", "underTheSingle", "phoneTheSingle", "typeTheSingle", "idCardTheSingle", "theRiderName", "theRiderPhone", "theRiderCardType", "orderTime", "orderContent", "merchantName", "merchantPhone", "orderChannel", "businessAddress", "itemName", "theRiderIdCard", "paymentAccount", "attachment", "userLogAcct", "userRegTime", "userSiteSchool", "payModeCd", "saleQtty", "userActualPayAmount", "payOnlineBankName", "carryBillId", "saleOrdTime", "delvStationName", "placeOrdIp", "lastUpdateTime", "corp", "userRegAddr", "selfCarryName", "payTime", "cneeMailAddr", "cneeFixedTel", "revAddr", "mcOrdFlag", "ordCancelTime", "userPayablrAmount", "pin", "xfsj", "clientPhone", "clientName", "clientCard", "emergencyContact"]
+						},
+						"互联网登陆": {
+							"val": "互联网登陆",
+							"num": 0,
+							"pId": "2",
+							"id": "6",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "快手",
+								"value": "快手"
+							}, {
+								"text": "抖音",
+								"value": "抖音"
+							}],
+							"lev": "3",
+							"key": "internet_login",
+							"table": ["traceCity", "traceStartTime", "traceStartLocation", "traceEndTime", "traceEndLocation", "traceOccurLocation", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["loginName", "zjhm", "loginPhone", "loginIp", "loginPort", "loginTime", "mac", "wifiMac", "wifiName", "attachment", "idfa", "net", "mct", "imi", "machineType", "ims", "imsi", "osv", "osp", "wqUnionid", "jdUuid", "chnl", "vct", "browserUniqId"]
+						}
+					}
+				},
+				"落脚点轨迹": {
+					"val": "落脚点轨迹",
+					"num": 0,
+					"pId": "2",
+					"id": "2",
+					"lev": "2",
+					"key": "location_trace",
+					"child": {
+						"网吧": {
+							"val": "网吧",
+							"num": 0,
+							"pId": "2",
+							"id": "7",
+							"lev": "3",
+							"key": "net_club",
+							"table": ["traceCity", "traceStartTime", "tracePhone", "traceEndTime", "traceClubAddress", "traceSiteNo", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["documentType", "identificationNumber", "name", "attachment"]
+						},
+						"快递": {
+							"val": "快递",
+							"num": 0,
+							"pId": "2",
+							"id": "8",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "三通一达",
+								"value": "三通一达"
+							}, {
+								"text": "顺丰",
+								"value": "顺丰"
+							}, {
+								"text": "闪送",
+								"value": "闪送"
+							}],
+							"lev": "3",
+							"key": "express",
+							"table": ["traceExpArvTime", "traceOrderContent", "traceAcceptCourierName", "traceSendCourierName", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["orderId", "sendersName", "sendersPhone", "documentTypeOfSenders", "idCardOfSenders", "sendersAddress", "recipientName", "recipientPhone", "documentTypeOfRecipient", "idCardOfRecipient", "addressOfRecipient", "orderTime", "recipientTime", "attachment"]
+						}
+					}
+				},
+				"其它轨迹": {
+					"val": "其它轨迹",
+					"num": 0,
+					"pId": "2",
+					"id": "4",
+					"lev": "2",
+					"key": "other_trace",
+					"child": {
+						"其它轨迹": {
+							"val": "其它轨迹",
+							"num": 0,
+							"pId": "2",
+							"id": "13",
+							"lev": "3",
+							"key": "other_trace",
+							"table": ["traceCity", "tracePhone", "traceStartTime", "traceStartLocation", "traceEndTime", "traceEndLocation", "traceOtherContent", "traceOccurLocation", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["cityList", "moreCity", " detailAddress", "attachment"]
+						}
+					}
+				}
+			}
+		},
+		"地址类": {
+			"val": "地址类",
+			"num": 0,
+			"id": "3",
+			"filters": [{
+				"text": "全部",
+				"value": ""
+			}, {
+				"text": "宽带",
+				"value": "宽带"
+			}, {
+				"text": "有线",
+				"value": "有线"
+			}, {
+				"text": "水",
+				"value": "水"
+			}, {
+				"text": "电",
+				"value": "电"
+			}, {
+				"text": "气暖",
+				"value": "气暖"
+			}, {
+				"text": "居住证",
+				"value": "居住证"
+			}, {
+				"text": "房产",
+				"value": "房产"
+			}, {
+				"text": "出租房",
+				"value": "出租房"
+			}, {
+				"text": "IP落地",
+				"value": "IP落地"
+			}, {
+				"text": "WIFI落地",
+				"value": "WIFI落地"
+			}, {
+				"text": "车辆登记",
+				"value": "车辆登记"
+			}, {
+				"text": "车辆停放",
+				"value": "车辆停放"
+			}, {
+				"text": "看守所",
+				"value": "看守所"
+			}, {
+				"text": "监狱",
+				"value": "监狱"
+			}],
+			"lev": "1",
+			"list": {
+				"vendorType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "数据类型",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "宽带",
+						"value": "宽带"
+					}, {
+						"text": "有线",
+						"value": "有线"
+					}, {
+						"text": "水",
+						"value": "水"
+					}, {
+						"text": "电",
+						"value": "电"
+					}, {
+						"text": "气暖",
+						"value": "气暖"
+					}, {
+						"text": "居住证",
+						"value": "居住证"
+					}, {
+						"text": "房产",
+						"value": "房产"
+					}, {
+						"text": "出租房",
+						"value": "出租房"
+					}, {
+						"text": "IP落地",
+						"value": "IP落地"
+					}, {
+						"text": "WIFI落地",
+						"value": "WIFI落地"
+					}, {
+						"text": "车辆登记",
+						"value": "车辆登记"
+					}, {
+						"text": "车辆停放",
+						"value": "车辆停放"
+					}, {
+						"text": "看守所",
+						"value": "看守所"
+					}, {
+						"text": "监狱",
+						"value": "监狱"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "vendorType",
+					"required": true
+				},
+				"emgyContact": {
+					"isHeader": false,
+					"name": "紧急联系人",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"frameNo": {
+					"isHeader": false,
+					"name": "车架号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createDepNo": {
+					"isHeader": false,
+					"name": "创建单位编号",
+					"type": "Input"
+				},
+				"latitude": {
+					"isHeader": false,
+					"name": "纬度",
+					"verify": "latitude",
+					"placeholder": "请输入纬度，范围是0-90，例：39.90",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "创建方式",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "预警指令",
+						"value": "预警指令"
+					}, {
+						"text": "线索研判",
+						"value": "线索研判"
+					}, {
+						"text": "比对推送",
+						"value": "比对推送"
+					}, {
+						"text": "手工添加",
+						"value": "手工添加"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "createType",
+					"required": true
+				},
+				"createPoliceNo": {
+					"isHeader": false,
+					"name": "创建民警用户编号",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"ptPhone": {
+					"isHeader": true,
+					"name": "在逃人员手机号码",
+					"width": 200,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": false,
+					"required": true,
+					"ellipsis": true
+				},
+				"addrPhone": {
+					"isHeader": false,
+					"name": "地址电话号码",
+					"isForm": false
+				},
+				"operator": {
+					"isHeader": false,
+					"name": "运营商",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"proved": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "状态",
+					"width": 90,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "未核实",
+						"value": "未核实"
+					}, {
+						"text": "已核实",
+						"value": "已核实"
+					}, {
+						"text": "核实未过",
+						"value": "核实未过"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "proved",
+					"required": true
+				},
+				"infoType": {
+					"defineVal": "",
+					"isHeader": true,
+					"name": "身份信息",
+					"width": 100,
+					"filters": [{
+						"text": "全部",
+						"value": ""
+					}, {
+						"text": "真实身份",
+						"value": "真实身份"
+					}, {
+						"text": "漂白身份",
+						"value": "漂白身份"
+					}, {
+						"text": "冒用身份",
+						"value": "冒用身份"
+					}],
+					"type": "Select",
+					"isForm": false,
+					"key": "infoType",
+					"required": true
+				},
+				"addrRegTime": {
+					"isHeader": true,
+					"name": "登记时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"addrExtPrisonTime": {
+					"isHeader": true,
+					"name": "出所时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"attachment": {
+					"isHeader": false,
+					"name": "附件",
+					"type": "Upload",
+					"isForm": true,
+					"required": false
+				},
+				"description": {
+					"name": "信息描述",
+					"type": "Input",
+					"required": true,
+					"isForm": true,
+					"isHeader": true,
+					"width": 120,
+					"ellipsis": true
+				},
+				"addrRegPerson": {
+					"isHeader": true,
+					"name": "注册人",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": false
+				},
+				"createPolice": {
+					"isHeader": true,
+					"name": "创建民警",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"createDep": {
+					"isHeader": true,
+					"name": "创建部门",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"startTime": {
+					"isHeader": false,
+					"name": "开始时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"id": {
+					"name": "id"
+				},
+				"vehicleType": {
+					"isHeader": false,
+					"name": "型号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"longitude": {
+					"isHeader": false,
+					"name": "经度",
+					"verify": "longitude",
+					"placeholder": "请输入经度，范围是0-180，例：110.90",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"emgyPhone": {
+					"isHeader": false,
+					"name": "紧急联系人电话号码",
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"engineNo": {
+					"data": [],
+					"isHeader": false,
+					"name": "发动机号",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"plateNo": {
+					"isHeader": false,
+					"name": "车牌",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"plateType": {
+					"isHeader": false,
+					"name": "车型",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"ip": {
+					"isHeader": false,
+					"name": "IP地址",
+					"verify": "ip",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"addrRegPhone": {
+					"isHeader": true,
+					"name": "手机号码",
+					"width": 200,
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"createPolicePhone": {
+					"isHeader": true,
+					"name": "民警电话",
+					"type": "Input",
+					"ellipsis": true
+				},
+				"addrRegAddress": {
+					"isHeader": true,
+					"name": "登记地址",
+					"verify": "IMSI",
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"entryTime": {
+					"isHeader": false,
+					"name": "入职时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"colour": {
+					"isHeader": false,
+					"name": "colour",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"createTime": {
+					"sorter": true,
+					"isHeader": true,
+					"name": "创建时间",
+					"width": 160,
+					"type": "Input",
+					"ellipsis": true
+				},
+				"ipPort": {
+					"isHeader": false,
+					"name": "端口",
+					"verify": "port",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"addrWorkName": {
+					"data": [],
+					"isHeader": true,
+					"name": "单位名称",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"resignationTime": {
+					"isHeader": false,
+					"name": "离职时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"addrWorkContact": {
+					"isHeader": true,
+					"name": "单位联系人",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"addrWorkAddress": {
+					"isHeader": true,
+					"name": "单位地址",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"location": {
+					"isHeader": false,
+					"name": "位置",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"relaPhoneNo": {
+					"isHeader": false,
+					"name": "关联手机号码",
+					"verify": "phone",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"endTime": {
+					"isHeader": false,
+					"name": "结束时间",
+					"type": "RangePicker",
+					"isForm": true,
+					"required": false
+				},
+				"position": {
+					"isHeader": false,
+					"name": "职位",
+					"type": "Input",
+					"isForm": true,
+					"required": false
+				},
+				"addrEntPrisonTime": {
+					"isHeader": true,
+					"name": "入所时间",
+					"width": 160,
+					"type": "RangePicker",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				},
+				"addrRegZjhm": {
+					"isHeader": true,
+					"name": "证件号码",
+					"width": 120,
+					"type": "Input",
+					"isForm": true,
+					"required": true,
+					"ellipsis": true
+				}
+			},
+			"key": "address",
+			"table": ["addrRegPhone", "addrRegTime", "addrRegPerson", "addrRegZjhm", "addrRegAddress", "addrWorkName", "addrWorkAddress", "addrWorkContact", "addrPhone", "addrEntPrisonTime", "addrExtPrisonTime", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+			"child": {
+				"住址信息": {
+					"val": "住址信息",
+					"num": 0,
+					"pId": "3",
+					"id": "0",
+					"lev": "2",
+					"key": "address",
+					"child": {
+						"车辆": {
+							"val": "车辆",
+							"num": 0,
+							"pId": "3",
+							"id": "4",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "车辆登记",
+								"value": "车辆登记"
+							}, {
+								"text": "车辆停放",
+								"value": "车辆停放"
+							}],
+							"lev": "3",
+							"key": "vehicle_address",
+							"table": ["addrRegPhone", "addrRegTime", "addrRegPerson", "addrRegZjhm", "addrRegAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["plateNo", "plateType", "vehicleType", "colour", "frameNo", "engineNo", "attachment"]
+						},
+						"互联网落地": {
+							"val": "互联网落地",
+							"num": 0,
+							"pId": "3",
+							"id": "2",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "IP落地",
+								"value": "IP落地"
+							}, {
+								"text": "WIFI落地",
+								"value": "WIFI落地"
+							}],
+							"lev": "3",
+							"key": "internet_address",
+							"table": ["addrRegPerson", "addrRegZjhm", "addrRegAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["startTime", "endTime", "operator", "ip", "ipPort", "location", "longitude", "latitude", "attachment"]
+						},
+						"住房关联": {
+							"val": "住房关联",
+							"num": 0,
+							"pId": "3",
+							"id": "0",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "宽带",
+								"value": "宽带"
+							}, {
+								"text": "有线",
+								"value": "有线"
+							}, {
+								"text": "水",
+								"value": "水"
+							}, {
+								"text": "电",
+								"value": "电"
+							}, {
+								"text": "气暖",
+								"value": "气暖"
+							}],
+							"lev": "3",
+							"key": "in_house",
+							"table": ["addrRegPhone", "addrRegTime", "addrRegPerson", "addrRegZjhm", "addrRegAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["emgyContact", "emgyPhone", "relaPhoneNo", "startTime", "endTime", "attachment"]
+						},
+						"住房": {
+							"val": "住房",
+							"num": 0,
+							"pId": "3",
+							"id": "1",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "居住证",
+								"value": "居住证"
+							}, {
+								"text": "房产",
+								"value": "房产"
+							}, {
+								"text": "出租房",
+								"value": "出租房"
+							}],
+							"lev": "3",
+							"key": "house",
+							"table": ["addrRegPhone", "addrRegTime", "addrRegPerson", "addrRegZjhm", "addrRegAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["emgyContact", "emgyPhone", "relaPhoneNo", "startTime", "endTime", "attachment"]
+						},
+						"在押信息": {
+							"val": "在押信息",
+							"num": 0,
+							"pId": "3",
+							"id": "6",
+							"filters": [{
+								"text": "全部",
+								"value": ""
+							}, {
+								"text": "看守所",
+								"value": "看守所"
+							}, {
+								"text": "监狱",
+								"value": "监狱"
+							}],
+							"lev": "3",
+							"key": "prison_info",
+							"table": ["addrRegPhone", "addrEntPrisonTime", "addrExtPrisonTime", "addrRegZjhm", "addrRegAddress", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["startTime", "endTime", "attachment"]
+						},
+						"工作单位": {
+							"val": "工作单位",
+							"num": 0,
+							"pId": "3",
+							"id": "3",
+							"lev": "3",
+							"key": "work",
+							"table": ["addrRegPhone", "addrRegTime", "addrWorkName", "addrWorkAddress", "addrWorkContact", "addrPhone", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["position", "entryTime", "resignationTime", "attachment"]
+						}
+					}
+				},
+				"其它地址": {
+					"val": "其它地址",
+					"num": 0,
+					"pId": "3",
+					"id": "1",
+					"lev": "2",
+					"key": "other_address",
+					"child": {
+						"其它地址信息": {
+							"val": "其它地址信息",
+							"num": 0,
+							"pId": "3",
+							"id": "7",
+							"lev": "3",
+							"key": "other_address",
+							"table": ["addrRegPhone", "addrRegTime", "addrWorkName", "addrWorkAddress", "addrWorkContact", "addrPhone", "vendorType", "infoType", "createType", "proved", "createDep", "createPolice", "createPolicePhone", "createTime"],
+							"open": ["attachment"]
+						}
+					}
+				}
+			}
+		}
+	},
+	"cardType": ["身份证", "护照", "士官证", "驾驶证", "学生证", "港澳通行证", "出生证明", "户口薄"]
+}
