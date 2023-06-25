@@ -178,17 +178,18 @@ public class GetPostTest {
     }
 
 
-    @PostMapping("upfile")
+    @PostMapping("route/all/upfile")
     public String upfile(@RequestParam("file") MultipartFile file) {
         if (!file.isEmpty()) {
             try {
                 // 获取上传文件的字节数组
                 byte[] bytes = file.getBytes();
 
-                String filePath = "/home/app/online_log/" + file.getOriginalFilename();
+                String filePath = "/Users/songyongmeng/temp/" + "from_server_"+file.getOriginalFilename();
                 try {
-                    String folderPath = "/home/app/online_log"; // 替换为实际文件夹路径
+                    String folderPath = "/Users/songyongmeng/temp"; // 替换为实际文件夹路径
                     deleteAction(folderPath);
+
 
 
                     FileUtil.saveBytesToFile(bytes, filePath);
@@ -197,7 +198,7 @@ public class GetPostTest {
                     System.out.println("文件保存失败：" + e.getMessage());
                 }
 
-                return loginResult;
+                return "文件保存成功";
             } catch (Exception e) {
                 return "Failed to upload file.";
             }
@@ -207,9 +208,9 @@ public class GetPostTest {
     }
 
 
-    @GetMapping("downfiles")
+    @GetMapping("route/all/downfiles")
     public ResponseEntity<Resource> downloadFile() {
-        String folderPath = "/home/app/online_log"; // 指定文件夹的路径
+        String folderPath = "/Users/songyongmeng/temp"; // 指定文件夹的路径
         File folder = new File(folderPath);
         File[] files = folder.listFiles();
         String fileName = "";
