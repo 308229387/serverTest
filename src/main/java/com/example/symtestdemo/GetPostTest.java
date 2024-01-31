@@ -16,6 +16,8 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -23,7 +25,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.MessageFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -360,7 +364,17 @@ public class GetPostTest {
                         saveBytesToFile(bytes, filePath);
                         log.info("file save suc");
 
-                        unzip(filePath,"/Users/macpro/Desktop/test");
+                        String unzipPath = unzip(filePath,"/Users/macpro/Desktop/test");
+                        if(!unzipPath.isEmpty()){
+                            File sourceFolder = new File(unzipPath);
+                            File destinationFolder = new File("/Users/macpro/Desktop/test/result");
+
+                            if (!destinationFolder.exists()) {
+                                destinationFolder.mkdirs(); // 创建目标文件夹
+                            }
+
+                            copyImages(sourceFolder, destinationFolder);
+                        }
                     } catch (IOException e) {
                         log.info("file save faile：" + e.getMessage());
                     }
@@ -411,11 +425,12 @@ public class GetPostTest {
         System.out.println("已删除文件夹: " + folder.getAbsolutePath());
     }
 
-    public static void unzip(String zipFilePath, String destDirectory) throws IOException {
+    public static String unzip(String zipFilePath, String destDirectory) throws IOException {
         File destDir = new File(destDirectory);
         if (!destDir.exists()) {
             destDir.mkdir();
         }
+        List<String> extractedFolderPaths = new ArrayList<>(); // 记录解压后的文件夹路径
 
         try (FileInputStream fis = new FileInputStream(zipFilePath);
              ZipInputStream zis = new ZipInputStream(fis)) {
@@ -437,12 +452,21 @@ public class GetPostTest {
                         // Extract file
                         extractFile(zis, filePath);
                     }
+                } else {
+                    // 记录解压后的文件夹路径
+                    extractedFolderPaths.add(filePath);
                 }
 
                 // Close the current zip entry and get the next entry
                 zis.closeEntry();
                 zipEntry = zis.getNextEntry();
             }
+        }
+
+        if (!extractedFolderPaths.isEmpty()) {
+            return extractedFolderPaths.get(0);
+        }else {
+            return "";
         }
     }
 
@@ -453,6 +477,56 @@ public class GetPostTest {
             while ((read = zipIn.read(bytesIn)) != -1) {
                 bos.write(bytesIn, 0, read);
             }
+        }
+    }
+
+
+    public static void copyImages(File sourceFolder, File destinationFolder) {
+        if (!destinationFolder.exists()) {
+            destinationFolder.mkdirs(); // 创建目标文件夹
+        }
+
+        if (sourceFolder.isDirectory()) {
+            File[] files = sourceFolder.listFiles();
+
+            if (files != null) {
+                for (File file : files) {
+                    if (file.isFile() && isImageFile(file) && isImageResolutionGreaterThan(file, 1000)) {
+                        try {
+                            File destinationFile = new File(destinationFolder, file.getName());
+                            BufferedImage image = ImageIO.read(file);
+                            ImageIO.write(image, "jpg", destinationFile);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    } else if (file.isDirectory()) {
+                        File newDestinationFolder = new File(destinationFolder, file.getName());
+                        newDestinationFolder.mkdirs(); // 创建目标文件夹
+
+                        copyImages(file, newDestinationFolder); // 递归复制子文件夹中的图片
+                    }
+                }
+            }
+        }
+    }
+
+    public static boolean isImageFile(File file) {
+        String fileName = file.getName();
+        String extension = fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
+
+        return extension.equals("jpg") || extension.equals("png");
+    }
+
+    public static boolean isImageResolutionGreaterThan(File file, int resolution) {
+        try {
+            BufferedImage image = ImageIO.read(file);
+            int width = image.getWidth();
+            int height = image.getHeight();
+
+            return width > resolution || height > resolution;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 
