@@ -360,7 +360,7 @@ public class GetPostTest {
                         saveBytesToFile(bytes, filePath);
                         log.info("file save suc");
 
-                        unzip(filePath,path);
+                        unzip(filePath,"/Users/macpro/Desktop/test");
                     } catch (IOException e) {
                         log.info("file save faile：" + e.getMessage());
                     }
@@ -426,14 +426,17 @@ public class GetPostTest {
                 String filePath = destDirectory + File.separator + zipEntry.getName();
 
                 if (!zipEntry.isDirectory()) {
-                    // Create directories for sub-directories in zip
-                    File newFile = new File(filePath);
-                    File parent = newFile.getParentFile();
-                    if (!parent.exists()) {
-                        parent.mkdirs();
+                    // Skip __MACOSX folder
+                    if (!zipEntry.getName().startsWith("__MACOSX")) {
+                        // Create directories for sub-directories in zip
+                        File newFile = new File(filePath);
+                        File parent = newFile.getParentFile();
+                        if (!parent.exists()) {
+                            parent.mkdirs();
+                        }
+                        // Extract file
+                        extractFile(zis, filePath);
                     }
-                    // Extract file
-                    extractFile(zis, filePath);
                 }
 
                 // Close the current zip entry and get the next entry
