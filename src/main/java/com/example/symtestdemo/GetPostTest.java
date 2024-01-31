@@ -8,17 +8,25 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.MessageFormat;
+import java.util.Date;
+import java.util.UUID;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 @RestController
 @Slf4j
@@ -316,6 +324,74 @@ public class GetPostTest {
         System.out.println("文件夹已清空，文件夹保留。");
     }
 
+    @PostMapping("/uploadImagePackage")
+    public String packageUpload(
+            @RequestParam("file") MultipartFile file, @RequestParam("taskId") String taskId,
+            @RequestParam(name = "date", required = false) @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") Date date) {
+
+        if (ObjectUtils.isEmpty(file.getOriginalFilename()) && (!file.getOriginalFilename().endsWith(".zip") || !file.getOriginalFilename().endsWith(".rar"))) {
+            return "empty or type error";
+        }
+
+        {
+//            String path = "/Users/macpro/Desktop/test/";
+            String path = "/Users/macpro/Desktop/test/";
+            if (!file.isEmpty()) {
+                try {
+                    File folder = new File(path);
+                    if (!folder.exists()) {
+                        boolean result = folder.mkdirs();
+                        if (result) {
+                            log.info("file is mkdirs");
+                        } else {
+                            log.info("file can not mkdir");
+                            return "file can not mkdir";
+                        }
+                    } else {
+                        log.info("file is already exist");
+                    }
+
+
+                    // 获取上传文件的字节数组
+                    byte[] bytes = file.getBytes();
+
+                    String filePath = path + file.getOriginalFilename();
+                    try {
+                        saveBytesToFile(bytes, filePath);
+                        log.info("file save suc");
+
+                        unzip(filePath,path);
+                    } catch (IOException e) {
+                        log.info("file save faile：" + e.getMessage());
+                    }
+                    return "file save suc";
+                } catch (Exception e) {
+                    return e.getMessage();
+                }
+            } else {
+                return "No file selected.";
+            }
+        }
+
+    }
+
+    public static void saveBytesToFile(byte[] data, String filePath) throws IOException {
+        FileOutputStream fos = null;
+
+        try {
+            fos = new FileOutputStream(filePath);
+            fos.write(data);
+        } finally {
+            if (fos != null) {
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     private static void deleteFolder(File folder) {
         File[] files = folder.listFiles();
         if (files != null) {
@@ -334,5 +410,48 @@ public class GetPostTest {
         folder.delete();
         System.out.println("已删除文件夹: " + folder.getAbsolutePath());
     }
+
+    public static void unzip(String zipFilePath, String destDirectory) throws IOException {
+        File destDir = new File(destDirectory);
+        if (!destDir.exists()) {
+            destDir.mkdir();
+        }
+
+        try (FileInputStream fis = new FileInputStream(zipFilePath);
+             ZipInputStream zis = new ZipInputStream(fis)) {
+
+            ZipEntry zipEntry = zis.getNextEntry();
+
+            while (zipEntry != null) {
+                String filePath = destDirectory + File.separator + zipEntry.getName();
+
+                if (!zipEntry.isDirectory()) {
+                    // Create directories for sub-directories in zip
+                    File newFile = new File(filePath);
+                    File parent = newFile.getParentFile();
+                    if (!parent.exists()) {
+                        parent.mkdirs();
+                    }
+                    // Extract file
+                    extractFile(zis, filePath);
+                }
+
+                // Close the current zip entry and get the next entry
+                zis.closeEntry();
+                zipEntry = zis.getNextEntry();
+            }
+        }
+    }
+
+    private static void extractFile(ZipInputStream zipIn, String filePath) throws IOException {
+        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(filePath))) {
+            byte[] bytesIn = new byte[4096];
+            int read;
+            while ((read = zipIn.read(bytesIn)) != -1) {
+                bos.write(bytesIn, 0, read);
+            }
+        }
+    }
+
 }
 
