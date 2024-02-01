@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -16,21 +19,20 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.nio.file.StandardCopyOption;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
+
+import static org.apache.poi.ss.usermodel.CellType.STRING;
 
 @RestController
 @Slf4j
@@ -214,7 +216,7 @@ public class GetPostTest {
                 // 获取上传文件的字节数组
                 byte[] bytes = file.getBytes();
 
-                String filePath = path+ "from_server_"+file.getOriginalFilename();
+                String filePath = path + "from_server_" + file.getOriginalFilename();
                 try {
                     String folderPath = "/home/app/online_log"; // 替换为实际文件夹路径
                     deleteAction(folderPath);
@@ -363,18 +365,23 @@ public class GetPostTest {
                     try {
                         saveBytesToFile(bytes, filePath);
                         log.info("file save suc");
-
-                        String unzipPath = unzip(filePath,"/Users/macpro/Desktop/test");
-                        if(!unzipPath.isEmpty()){
-                            File sourceFolder = new File(unzipPath);
-                            File destinationFolder = new File("/Users/macpro/Desktop/test/result");
-
-                            if (!destinationFolder.exists()) {
-                                destinationFolder.mkdirs(); // 创建目标文件夹
-                            }
-
-                            copyImages(sourceFolder, destinationFolder);
+                        String unzipPath = unzip(filePath, "/Users/macpro/Desktop/test");
+                        if (!unzipPath.isEmpty()) {
+                            List<Path> xlsFilePaths = findXlsFiles(Paths.get(unzipPath));
+                            System.out.println(xlsFilePaths.get(0).toUri().getPath());
+                            List<String> columnData = readColumn(xlsFilePaths.get(0).toUri().getPath(), 8);
+                            moveImages(unzipPath,"/Users/macpro/Desktop/test/result",columnData);
                         }
+//                        if(!unzipPath.isEmpty()){
+//                            File sourceFolder = new File(unzipPath);
+//                            File destinationFolder = new File("/Users/macpro/Desktop/test/result");
+//
+//                            if (!destinationFolder.exists()) {
+//                                destinationFolder.mkdirs(); // 创建目标文件夹
+//                            }
+//
+//                            moveImages(sourceFolder, destinationFolder);
+//                        }
                     } catch (IOException e) {
                         log.info("file save faile：" + e.getMessage());
                     }
@@ -465,7 +472,7 @@ public class GetPostTest {
 
         if (!extractedFolderPaths.isEmpty()) {
             return extractedFolderPaths.get(0);
-        }else {
+        } else {
             return "";
         }
     }
@@ -480,35 +487,55 @@ public class GetPostTest {
         }
     }
 
+    public static void moveImages(String sourceFolder, String destinationFolder, List<String> imageNames) {
+        File sourceDir = new File(sourceFolder);
+        File destinationDir = new File(destinationFolder);
 
-    public static void copyImages(File sourceFolder, File destinationFolder) {
-        if (!destinationFolder.exists()) {
-            destinationFolder.mkdirs(); // 创建目标文件夹
+        if (!destinationDir.exists()) {
+            destinationDir.mkdirs();
         }
 
-        if (sourceFolder.isDirectory()) {
-            File[] files = sourceFolder.listFiles();
-
-            if (files != null) {
-                for (File file : files) {
-                    if (file.isFile() && isImageFile(file) && isImageResolutionGreaterThan(file, 1000)) {
-                        try {
-                            File destinationFile = new File(destinationFolder, file.getName());
-                            BufferedImage image = ImageIO.read(file);
-                            ImageIO.write(image, "jpg", destinationFile);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    } else if (file.isDirectory()) {
-                        File newDestinationFolder = new File(destinationFolder, file.getName());
-                        newDestinationFolder.mkdirs(); // 创建目标文件夹
-
-                        copyImages(file, newDestinationFolder); // 递归复制子文件夹中的图片
-                    }
+        for (String imageName : imageNames) {
+            File imageFile = new File(sourceDir, imageName);
+            if (imageFile.exists()) {
+                Path sourcePath = imageFile.toPath();
+                Path destinationPath = new File(destinationDir, imageName).toPath();
+                try {
+                    Files.move(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+                    System.out.println("Moved image: " + imageName);
+                } catch (Exception e) {
+                    System.out.println("Failed to move image: " + imageName);
+                    e.printStackTrace();
                 }
+            } else {
+                System.out.println("Image not found: " + imageName);
             }
         }
     }
+
+
+//    public static void moveImages(File sourceFolder, File destinationFolder) {
+//        if (sourceFolder.isDirectory()) {
+//            File[] files = sourceFolder.listFiles();
+//
+//            if (files != null) {
+//                for (File file : files) {
+//                    if (file.isFile() && isImageFile(file)) {
+//                        if (file.renameTo(new File(destinationFolder, file.getName()))) {
+//                            System.out.println("成功移动文件: " + file.getName());
+//                        } else {
+//                            System.out.println("移动文件失败: " + file.getName());
+//                        }
+//                    } else if (file.isDirectory()) {
+//                        File newDestinationFolder = new File(destinationFolder, file.getName());
+//                        newDestinationFolder.mkdirs(); // 创建目标文件夹
+//
+//                        moveImages(file, newDestinationFolder); // 递归移动子文件夹中的图片
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     public static boolean isImageFile(File file) {
         String fileName = file.getName();
@@ -517,17 +544,52 @@ public class GetPostTest {
         return extension.equals("jpg") || extension.equals("png");
     }
 
-    public static boolean isImageResolutionGreaterThan(File file, int resolution) {
-        try {
-            BufferedImage image = ImageIO.read(file);
-            int width = image.getWidth();
-            int height = image.getHeight();
-
-            return width > resolution || height > resolution;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
+    public static List<Path> findXlsFiles(Path folder) throws IOException {
+        try (Stream<Path> files = Files.list(folder)) {
+            return files
+                    .filter(Files::isRegularFile)
+                    .filter(GetPostTest::isXlsFile)
+                    .collect(Collectors.toList());
         }
+    }
+
+    public static boolean isXlsFile(Path path) {
+        String fileName = path.getFileName().toString();
+        String extension = fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
+
+        return extension.equals("xls");
+    }
+    public static List<String> readColumn(String filePath, int columnIndex) {
+        List<String> columnData = new ArrayList<>();
+
+        try (InputStream inputStream = new FileInputStream(filePath);
+             Workbook workbook = new HSSFWorkbook(inputStream)) {
+            Sheet sheet = workbook.getSheetAt(0); // 获取第一个工作表
+            for (Row row : sheet) {
+                Cell cell = row.getCell(columnIndex);
+                if (cell != null) {
+                    String cellValue = getCellValueAsString(cell);
+                    if(!columnData.contains(cellValue)&&(cellValue.endsWith(".png")||cellValue.endsWith(".jpg"))){
+                        columnData.add(cellValue);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return columnData;
+    }
+
+    private static String getCellValueAsString(Cell cell) {
+        String cellValue = "";
+        if (cell.getCellTypeEnum() == CellType.STRING) {
+            cellValue = cell.getStringCellValue();
+        } else if (cell.getCellTypeEnum() == CellType.NUMERIC) {
+            cellValue = String.valueOf(cell.getNumericCellValue());
+        } else if (cell.getCellTypeEnum() == CellType.BOOLEAN) {
+            cellValue = String.valueOf(cell.getBooleanCellValue());
+        }
+        return cellValue;
     }
 
 }
